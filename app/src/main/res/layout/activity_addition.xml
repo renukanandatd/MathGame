@@ -82,15 +82,16 @@
 
     <TextView
         android:id="@+id/editTextQuestion"
-        android:layout_width="250dp"
-        android:layout_height="75dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@color/green"
         android:gravity="center"
         android:text="Question"
         android:textColor="#FBF9F9"
-        android:textSize="40dp" />
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextAnswer"
