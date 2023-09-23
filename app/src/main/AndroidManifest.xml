@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ResultActivity"/>
+        <activity
             android:name=".Addition"
             android:exported="false"
-            android:theme="@style/Theme.Addition"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Addition" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MathGame"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MathGame">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

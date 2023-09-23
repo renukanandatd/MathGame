@@ -1,6 +1,6 @@
 package com.example.mathgame
 
-import android.content.IntentSender.OnFinished
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -41,7 +41,7 @@ class Addition : AppCompatActivity() {
         editTextQuestion=findViewById(R.id.editTextQuestion)
         editTextAnswer=findViewById(R.id.editTextAnswer)
         buttonOk=findViewById(R.id.buttonOK)
-        buttonNext=findViewById(R.id.buttonNext)
+        buttonNext=findViewById(R.id.playAgain)
 
         gameContinue()
 
@@ -73,6 +73,17 @@ class Addition : AppCompatActivity() {
 
             gameContinue()
             editTextAnswer.setText("")
+
+            if(userLife==0){
+                Toast.makeText(this,"GAME OVER!!!",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this@Addition,ResultActivity::class.java)
+                intent.putExtra("score",userScore)
+                startActivity(intent)
+                finish()
+            }
+            else{
+                gameContinue()
+            }
         }
     }
     fun gameContinue(){
